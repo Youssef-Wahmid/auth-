@@ -1,0 +1,5 @@
+$_SERVER['REQUEST_METHOD']=='POST' //return boleean
+
+password_hash($_POST['password'] ,PASSWORD_DEFAULT ) // hash pw
+
+ $conn->query($req) //execute request + return boolen
