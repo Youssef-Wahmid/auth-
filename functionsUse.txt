@@ -1,5 +1,18 @@
 $_SERVER['REQUEST_METHOD']=='POST' //return boleean
 
 password_hash($_POST['password'] ,PASSWORD_DEFAULT ) // hash pw
+password_verify($password, $hashed_password) // verify pw
 
  $conn->query($req) //execute request + return boolen
+
+ $conn->real_escape_string( $_POST['email'])  //avoid sql injection
+
+?$result->fetch_assoc() //retourne une seule ligne sous forme d'un tableau associatif
+
+session functions
+1️⃣ Start the session with session_start(); (Mandatory at the top of the file).
+2️⃣ Regenerate the session ID (session_regenerate_id(true);) to prevent session hijacking.
+3️⃣ Add/modify session variables ($_SESSION['name'], $_SESSION['role'], etc.).
+4️⃣ Check and display session variables using isset($_SESSION['key']);.
+5️⃣ Remove a specific session variable (unset($_SESSION['email']);).
+6️⃣ Completely destroy the session (session_destroy();).
